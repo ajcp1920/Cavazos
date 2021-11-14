@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Conversor de Grados</title>
+        <script src="../../Resources/JQuery341/jquery-3.4.1.js"></script>
+        <script src="peticionajax.js"></script>
+    </head>
+
+    <body>
+        <h1>Convertidor de Grados</h1>
+        <form id="formulario" method="GET" action="conversor.php">
+            <label for="num">Introduzca el Grado Fahrenheit: </label>
+            <input type="text" id="num" name="num" size="10"/>
+
+            <input type="submit" id="botonCalc" value="boton submit"/>
+            <input type="button" id="botonAjax" value="Boton Ajax"/>
+        </form>
+        <h2>Resultado: </h2>
+
+        <div id='resultado'></div>
+    </body>
+</html>
