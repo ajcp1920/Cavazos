@@ -27,6 +27,25 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
 
 <body>
     <div id="contenedorPrin" class="toggled">
+        
+        <div class="modal fade" id="modalSalida" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modal-header-primary">
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                        <h2 class="modal-title text-center">Confirmación</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Desea salir del Sistema?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./php/logout.php" class="btn btn-default">Si</a>
+                        <a href="#" data-dismiss="modal" class="btn btn-default">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Contenido -->
         <div id="contenedorConte">
             <div class="container-fluid">
