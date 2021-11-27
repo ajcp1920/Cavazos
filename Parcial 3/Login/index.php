@@ -13,14 +13,14 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Descripción">
     <meta name="author" content="Contenido">
-    <title>Sistema</title>
+    <title>Sistema de Mercado</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='./css/ModalHeaderColor.css' />
 
-    <link rel="stylesheet" href="./css/formulario.css">
+
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/index.js"></script>
 </head>
@@ -41,11 +41,11 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
                         <button type="button" class="btn btn-danger btn-lg" id="botonSalir">Cerrar Sesion<i class="fa fa-sign-out"></i></button>
                     </div>
                 </div>
+                <form class="form">
+                    <div class="row contenido">
 
-                <div class="row contenido">
 
 
-                    <form class="form">
 
                         <div class="row">
                         </div>
@@ -141,11 +141,11 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
 
                                 <button type="submit" class="btn btn-primary">Confirmar datos</button>
                             </form>
-                    </form>
-                </div>
                 </form>
             </div>
+            </form>
         </div>
+    </div>
     </div>
 
     </div>
