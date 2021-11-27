@@ -28,7 +28,7 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
 <body>
     <div id="contenedorPrin" class="toggled">
         
-        <div class="modal fade" id="modalSalida" role="dialog">
+        <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header modal-header-primary">
