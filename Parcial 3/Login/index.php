@@ -15,39 +15,40 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
     <meta name="author" content="Contenido">
     <title>Sistema de Mercado</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css">
+    <script src="./resources/jquery/jquery-1.11.3.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='./css/ModalHeaderColor.css' />
 
 
+    <link rel="stylesheet" href="./resources/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/index.js"></script>
+
 </head>
 
 <body>
     <div id="contenedorPrin" class="toggled">
-        
-        <!-- Modal -->
-<div class="modal fade" id="modalSalida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmacion</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-         <a href="./php/logout.php" class="btn btn-default">Si</a>
-               <a href="#" data-dismiss="modal" class="btn btn-default">No</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+        <!-- Modal de Confirmación -->
+        <div class="modal fade" id="modalSalida" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modal-header-primary">
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                        <h2 class="modal-title text-center">Confirmación</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Desea salir del Sistema?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./php/logout.php" class="btn btn-default">Si</a>
+                        <a href="#" data-dismiss="modal" class="btn btn-default">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Contenido -->
         <div id="contenedorConte">
             <div class="container-fluid">
