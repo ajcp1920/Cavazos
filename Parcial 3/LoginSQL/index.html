@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LoginSQL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css" />
+    
+  </head>
+  <body>
+    <main>
+      <div class="contenedor__todo">
+        <div class="caja__trasera">
+          <div class="caja__trasera-login">
+            <h3>¿Ya tienes una cuenta?</h3>
+            <p>Inicia sesion para entrar a la pagina</p>
+            <button id="btn__iniciar-sesion">Iniciar Sesion</button>
+          </div>
+
+          <div class="caja__trasera-register">
+            <h3>¿Aun no tienes una cuenta?</h3>
+            <p>Registrate para que puedas iniciar sesion</p>
+            <button id="btn__registrarse">Registrarse</button>
+          </div>
+        </div>
+
+        <div class="contenedor__login-register">
+          <form action="" class="formulario__login">
+            <h2>Iniciar Sesion</h2>
+            <input type="text" placeholder="Usuario" />
+            <input type="password" placeholder="Contraseña" />
+            <button type="button" id="botonAceptar" class="btn btn-lg btn-primary btn-block">Iniciar Sesión
+              <span class="glyphicon glyphicon-log-in"></span></button>
+          </form>
+
+          <form action="" class="formulario__register">
+            <h2>Registrarse</h2>
+            <input type="text" placeholder="Nombre Completo" />
+            <input type="text" placeholder="Correo Electronico" />
+            <input type="text" placeholder="Usuario" />
+            <input type="password" placeholder="Contraseña" />
+            <button>Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
