@@ -1,14 +1,14 @@
 <?php
-$vId        = $_POST['id'];
-$vNombre    = $_POST['nom'];
-$vNumerotel = $_POST['numtel'];
-$vDireccion = $_POST['direc'];
-$vCiudad     = $_POST['cd'];
-$vEstado  = $_POST['est'];
-$vCodigo_postal   = $_POST['cp'];
-$vCorreo   = $_POST['email'];
-$vDetalles   = $_POST['detalle'];
-$vTipo      = $_POST['tip'];
+$vidform        = $_POST['idform'];
+$vnombre_completo  = $_POST['nombre_completo'];
+$vnumero_tel = $_POST['numero_tel'];
+$vdireccion = $_POST['direccion'];
+$vciudad    = $_POST['ciudad'];
+$vestado  = $_POST['estado'];
+$vcodigo_postal   = $_POST['codigo_postal'];
+$vcorreo   = $_POST['correo'];
+$vdetalles   = $_POST['detalles'];
+$vTipo      = $_POST['tipoOperacion'];
 
 $hostname = 'localhost';
 $database = 'login_register_db';
