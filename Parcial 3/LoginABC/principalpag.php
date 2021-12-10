@@ -22,6 +22,7 @@
             height: 100%;
         }
 
+        
         .container{
             width: 100%;
             height: 80%;
@@ -126,7 +127,7 @@
             ?>
         </h1>
         <br><br>
-        <h4>Listado</h4>
+        <h4>Consulta de datos almacenados</h4>
         
         <center><table class="table table-striped table-dark">
 	    <tr align="center">
@@ -183,7 +184,7 @@
     <div class="form">
         <div id="Insertar">
             <form method="POST" action="Insertar.php">
-                <h4 align="center">Agregar Usuario</h4>
+                <h4 align="center">Agregar Datos para envio</h4>
                 <div class="nombre line-input">
                     <input type="text" name="nombre" placeholder = "Nombre Completo"><br />
                 </div>
