@@ -1,7 +1,7 @@
 <?php
-$vidform        = $_POST['idform'];
-$vnombre_completo  = $_POST['nombre_completo'];
-$vnumero_tel = $_POST['numero_tel'];
+$vidform        = $_POST['id'];
+$vnombre_comp  = $_POST['nom'];
+$vnumero_tel = $_POST['num_tel'];
 $vdireccion = $_POST['direccion'];
 $vciudad    = $_POST['ciudad'];
 $vestado  = $_POST['estado'];
@@ -28,32 +28,32 @@ try {
 try {
     if ($vTipo==1) {
         $query = "INSERT INTO formulario
-                  SET nombre_completo = ?, numero_tel = ?, direccion  = ?, ciudad = ?, estado=?, codigo_postal = ? , correo=?, detalles=?";
+                  SET nombre_comp = ?, numero_tel = ?, direccion  = ?, ciudad = ?, estado=?, codigo_postal = ? , correo=?, detalles=?";
 
         $stmt = $dbh->prepare($query);
-        $stmt->bindParam(1, $vNombre);
-        $stmt->bindParam(2, $vNumerotel);
-        $stmt->bindParam(3, $vDireccion);
-        $stmt->bindParam(4, $vCiudad);
-        $stmt->bindParam(5, $vEstado);
-        $stmt->bindParam(6, $vCodigo_postal);
-        $stmt->bindParam(7, $vCorreo);
-        $stmt->bindParam(8, $vDetalles);
+        $stmt->bindParam(1, $vnombre_comp);
+        $stmt->bindParam(2, $vnumero_tel);
+        $stmt->bindParam(3, $vdireccion);
+        $stmt->bindParam(4, $vciudad);
+        $stmt->bindParam(5, $vestado);
+        $stmt->bindParam(6, $vcodigo_postal);
+        $stmt->bindParam(7, $vcorreo);
+        $stmt->bindParam(8, $vdetalles);
     } else {
-        $query = "UPDATE formulario
-                  nombre_completo = ?, numero_tel = ?, direccion  = ?, ciudad = ?, estado=?, codigo_postal = ? , correo=?, detalles=?
+        $query = "UPDATE formulario 
+                  SET nombre_comp = ?, numero_tel = ?, direccion  = ?, ciudad = ?, estado=?, codigo_postal = ? , correo=?, detalles=?
                   WHERE idform = ?";
 
         $stmt = $dbh->prepare($query);
-        $stmt->bindParam(1, $vNombre);
-        $stmt->bindParam(2, $vNumerotel);
-        $stmt->bindParam(3, $vDireccion);
-        $stmt->bindParam(4, $vCiudad);
-        $stmt->bindParam(5, $vEstado);
-        $stmt->bindParam(6, $vCodigo_postal);
-        $stmt->bindParam(7, $vCorreo);
-        $stmt->bindParam(8, $vDetalles);
-        $stmt->bindParam(8, $vId);
+        $stmt->bindParam(1, $vnombre_comp);
+        $stmt->bindParam(2, $vnumero_tel);
+        $stmt->bindParam(3, $vdireccion);
+        $stmt->bindParam(4, $vciudad);
+        $stmt->bindParam(5, $vestado);
+        $stmt->bindParam(6, $vcodigo_postal);
+        $stmt->bindParam(7, $vcorreo);
+        $stmt->bindParam(8, $vdetalles);
+        $stmt->bindParam(9, $vidform);
         
     }
 
@@ -70,9 +70,9 @@ try {
             $row['detalle']    = $result['consecutivo'];
         } else {
             $row['resultado']  = '0';
-            $row['informacion']= $vNombre;
+            $row['informacion']= $vnombre_comp;
             $row['mensaje']    = "Registro Modificado exitosamente";
-            $row['detalle']    = $vId;
+            $row['detalle']    = $vidform;
        }
    } else {
         $row['resultado']  = '2';

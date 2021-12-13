@@ -60,8 +60,8 @@ if (!isset($_SESSION['usuario'])) {
                         <input id="idform" type="text" class="form-control" placeholder="00" disabled />
                     </div>
                     <div class="form-group col-xs-8">
-                        <label for="nombre_completo">Nombre Completo</label>
-                        <input id="nombre_completo" type="text" class="form-control" placeholder="Ej. Arturo de Jesus Cavazos Pastrana" disabled />
+                        <label for="nombre_comp">Nombre Completo</label>
+                        <input id="nombre_comp" type="text" class="form-control" placeholder="Ej. Arturo de Jesus Cavazos Pastrana" disabled />
                     </div>
                 </div>
 

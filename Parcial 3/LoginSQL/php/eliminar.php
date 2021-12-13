@@ -17,7 +17,7 @@ try {
 
 $sql = "DELETE FROM formulario WHERE idform = ?";
 $stmt = $dbh->prepare($sql);
-$stmt->bindParam(1, $IdUsuario);
+$stmt->bindParam(1, $idform);
 
  if($stmt->execute()){
        $row['resultado']  = '0';

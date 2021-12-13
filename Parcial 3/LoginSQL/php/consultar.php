@@ -1,5 +1,5 @@
 <?php
-$IdUsuario = $_POST['idform'];
+$Idform = $_POST['idform'];
 // $IdUsuario = '3';
 
 $hostname = 'localhost';

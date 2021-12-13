@@ -8,8 +8,8 @@ $('document').ready(function () {
         var vidu = prompt("ID de Usuario:");
 
 
-        $.post('./php/buscar.php',
-                {idUsuario: vidu},
+        $.post('./php/consultar.php',
+                {idform: vidu},
                 function (ret) {
                 if (ret['resultado'] != 0) {
 
@@ -37,8 +37,8 @@ $('document').ready(function () {
 
 
                 $('#idform').val(ret.detalle.idform);
-                $('#nombre_completo').val(ret.detalle.nombre_completo);
-                $('#numero_tel').val(ret.detalle.num_tel);
+                $('#nombre_comp').val(ret.detalle.nombre_comp);
+                $('#numero_tel').val(ret.detalle.numero_tel);
                 $('#direccion').val(ret.detalle.direccion);
                 $('#ciudad').val(ret.detalle.ciudad);
                 $('#estado').val(ret.detalle.estado);
@@ -103,14 +103,14 @@ $('document').ready(function () {
         $('#b_consultar').prop("disabled", true);
 
         $('.form-control').prop("disabled", false);
-        $('#idUsuario').prop("disabled", true);
-        $("#nombre").focus();
+        $('#id').prop("disabled", true);
+        $("#nombre_comp").focus();
     });
 
 
     $("#b_grabar").click(function () {
         var vid = $('#idform').val();
-        var vnom = $('#nombre_completo').val();
+        var vnom = $('#nombre_comp').val();
         var vtel = $('#numero_tel').val();
         var vdir = $('#direccion').val();
         var vcit = $('#ciudad').val();
@@ -193,7 +193,7 @@ $('document').ready(function () {
         var vid = $('#idform').val();
 
         if (confirm('Borrar')) {
-            $.post('../php/eliminar.php',
+            $.post('./php/eliminar.php',
             {idform: vid},
             function (ret) {
                 alert("Borrado");
